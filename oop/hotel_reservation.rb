@@ -31,4 +31,71 @@ end
 # The add_a_fridge method
 # The add_a_crib method
 # The add_a_custom_amenity method
+hotel = HotelReservation.new(customer_name: "shiran", date: "june", room_number: "8")
+
+
+puts "TESTING ability to change a room number..."
+puts
+
+hotel.room_number = 9
+result = hotel.room_number
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == 9
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts "TESTING add_a_fridge..."
+puts 
+
+hotel.add_a_fridge
+result = hotel.amenities
+puts "Your method returned:"
+puts result
+puts
+
+if result[0]== "fridge"
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts "TESTING add_a_crib..."
+puts 
+
+hotel.add_a_crib
+result = hotel.amenities
+puts "Your method returned:"
+puts result[1]
+puts
+
+if result[1]== "crib"
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts "TESTING add_a_custom_amenity..."
+puts 
+ 
+hotel.add_a_custom_amenity("Dinner")
+result = hotel.amenities
+puts "Your method returned:"
+puts result[2]
+puts
+
+if result[2]== "Dinner"
+  puts "PASS!"
+else
+  puts "F"
+end
+
+
+
+
 
