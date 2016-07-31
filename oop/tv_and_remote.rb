@@ -54,7 +54,7 @@ end
 tv = Tv.new
 remote = Remote.new(tv)
 
-puts "TESTING toggle_power..."
+puts "TESTING toggle_power(Turning on)..."
 puts
 
 result = remote.toggle_power(tv)
@@ -64,6 +64,21 @@ puts result
 puts
 
 if result == true
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts "TESTING toggle_power(Turning off)..."
+puts
+
+result = remote.toggle_power(tv)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == false
   puts "PASS!"
 else
   puts "F"
