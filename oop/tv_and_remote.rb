@@ -21,8 +21,7 @@ class Tv
   end
 end
 
-class Remote < Tv
-    attr_accessor :power, :volume, :channel 
+class Remote 
     
     def initialize(tv)
       @tv = tv 
