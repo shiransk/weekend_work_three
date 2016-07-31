@@ -15,8 +15,6 @@ def mutation?(base_word, mutation)
     end
   end
 
-  test.uniq!
-
     if test.length == second_word.length 
       return true
     else

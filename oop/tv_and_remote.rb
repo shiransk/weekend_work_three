@@ -127,20 +127,3 @@ if tv.channel == 35
 else
   puts "F"
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

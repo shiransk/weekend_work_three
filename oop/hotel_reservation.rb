@@ -94,8 +94,3 @@ if result[2]== "Dinner"
 else
   puts "F"
 end
-
-
-
-
-
