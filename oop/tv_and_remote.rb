@@ -27,24 +27,24 @@ class Remote
       @tv = tv 
     end
     
-    def toggle_power(tv)
-      if tv.power == false
-        tv.power = true 
-      elsif tv.power == true
-      tv.power = false
+    def toggle_power
+      if @tv.power == false
+        @tv.power = true 
+      elsif @tv.power == true
+      @tv.power = false
       end 
     end
     
-    def increment_volume(tv)
-      tv.volume += 1 
+    def increment_volume
+      @tv.volume += 1 
     end
     
-    def decrement_volume(tv)
-      tv.volume -= 1
+    def decrement_volume
+      @tv.volume -= 1
     end
     
-    def set_channel (tv, channel)
-      tv.channel = channel
+    def set_channel (channel)
+      @tv.channel = channel
     end 
 end 
 
@@ -56,13 +56,13 @@ remote = Remote.new(tv)
 puts "TESTING toggle_power(Turning on)..."
 puts
 
-result = remote.toggle_power(tv)
+result = remote.toggle_power
 
 puts "Your method returned:"
 puts result
 puts
 
-if result == true
+if tv.power == true
   puts "PASS!"
 else
   puts "F"
@@ -71,13 +71,13 @@ end
 puts "TESTING toggle_power(Turning off)..."
 puts
 
-result = remote.toggle_power(tv)
+result = remote.toggle_power
 
 puts "Your method returned:"
 puts result
 puts
 
-if result == false
+if tv.power == false
   puts "PASS!"
 else
   puts "F"
@@ -86,13 +86,13 @@ end
 puts "TESTING increment_volume..."
 puts
 
-result = remote.increment_volume(tv)
+result = remote.increment_volume
 
 puts "Your method returned:"
 puts result
 puts
 
-if result == 6
+if tv.volume == 6
   puts "PASS!"
 else
   puts "F"
@@ -101,13 +101,13 @@ end
 puts "TESTING decrement_volume..."
 puts
 
-result = remote.decrement_volume(tv)
+result = remote.decrement_volume
 
 puts "Your method returned:"
 puts result
 puts
 
-if result == 5
+if tv.volume == 5
   puts "PASS!"
 else
   puts "F"
@@ -116,13 +116,13 @@ end
 puts "TESTING set_channel..."
 puts
 
-result = remote.set_channel(tv, 35)
+result = remote.set_channel(35)
 
 puts "Your method returned:"
 puts result
 puts
 
-if result == 35
+if tv.channel == 35
   puts "PASS!"
 else
   puts "F"
