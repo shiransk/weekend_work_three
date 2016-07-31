@@ -31,7 +31,7 @@ class Remote
       if @tv.power == false
         @tv.power = true 
       elsif @tv.power == true
-      @tv.power = false
+        @tv.power = false
       end 
     end
     
